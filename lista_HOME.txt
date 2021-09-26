@@ -1,0 +1,17 @@
+.
+..
+Avaliação1
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.git
+.gitconfig
+GitHub
+.pki
+.python_history
+README.md
+semana1
+semana1.zip
+TESTE
+.viminfo
