@@ -11,11 +11,7 @@ n2 = (sys.argv[3])
 n3 = (sys.argv[4])
 n4 = (sys.argv[5])
 
-#Conferido se os argumentos inseridos são válidos:
-if isinstance(seq, str) is False:
-	print('Por favor, insira uma sequência de DNA válida, contendo somente bases A, T, G e C')
-
-
+digitos = any(map(str.isdigit, seq))
 def is_integer(n):
 	try:
 		float(n)
@@ -23,11 +19,13 @@ def is_integer(n):
 		return False
 	else:
 		return float(n).is_integer()
-
-if is_integer(n1) is False or is_integer(n2) is False or is_integer(n3) is False or is_integer(n4) is False:
+#Conferindo se o primeiro argumento é composto somente por caracteres não numéricos
+if digitos is True:
+	print('Por favor, insira uma sequência de DNA válida, contendo somente baes A, T, C e G')
+#Conferindo se os argumentos seguintes são números inteiros
+elif is_integer(n1) is False or is_integer(n2) is False or is_integer(n3) is False or is_integer(n4) is False:
 	print('Por favor, insira números inteiros que correspondam ao início e fim da sua sequência de interesse')
-
-#Assim como no exercício anterior, checaremos se os valores inseridos são válidos, definindo suas variáveis como int para permitir as comparações de valores
+#Assim como no exercício anterior, checaremos se os valores inseridos são válidos (nesse caso, se são maiores que o comprimento do gene), definindo suas variáveis como int para permitir as comparações de valores
 else:
 	n1 = int(n1)
 	n2 = int(n2)
