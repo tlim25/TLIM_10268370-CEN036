@@ -21,7 +21,7 @@ def is_integer(n):
 		return float(n).is_integer()
 #Conferindo se o primeiro argumento é composto somente por caracteres não numéricos
 if digitos is True:
-	print('Por favor, insira uma sequência de DNA válida, contendo somente baes A, T, C e G')
+	print('Por favor, insira uma sequência de DNA válida')
 #Conferindo se os argumentos seguintes são números inteiros
 elif is_integer(n1) is False or is_integer(n2) is False or is_integer(n3) is False or is_integer(n4) is False:
 	print('Por favor, insira números inteiros que correspondam ao início e fim da sua sequência de interesse')
